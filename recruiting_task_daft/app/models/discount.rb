@@ -7,6 +7,6 @@ class Discount < ApplicationRecord
 
     validates :kind, inclusion: { in: KINDS }
     validates :name, presence: true, uniqueness: true
-    validates :price, numericality: { greater_than_or_equal_to: 0 }, allow_blank: true
-    validates :count, numericality: { greater_than_or_equal_to: 0 }, allow_blank: true
+    validates :price, numericality: { greater_than: 0 }, allow_blank: true
+    validates :count, numericality: { greater_than: 0 }, allow_blank: true
 end
